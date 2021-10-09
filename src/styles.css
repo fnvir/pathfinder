@@ -1,0 +1,443 @@
+/* The container must be positioned relative: */
+.custom-select {
+	position: relative;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    width: 200px;
+    width: 25ch;
+}
+
+.custom-select select {
+    display: none; /*hide original SELECT element: */
+}
+
+/* Style the arrow inside the select element: */
+.select-selected:after {
+    position: absolute;
+    /* display: inline; */
+    content: "";
+    top: 1em;
+    right: 1ch;
+	width: 0;
+	height: 0;
+	border: 6px solid transparent;
+	border-color: #fff transparent transparent transparent;
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+	border-color: transparent transparent #fff transparent;
+	top: 0.4em;
+}
+
+/* style the items (options), including the selected item: */
+.select-items div,
+.select-selected {
+    color: #ffffff;
+    padding: 0.5em 1em;
+	border: 1px solid transparent;
+	border-color: transparent transparent rgba(71, 71, 71, 0.431) transparent;
+    cursor: pointer;
+}
+
+.select-selected {
+    color:rgba(255, 255, 255, 0.883);
+    background-color: rgb(37, 40, 42);
+}
+
+
+/* Style items (options): */
+.select-items {
+	position: absolute;
+	background-color: rgb(48, 50, 51);
+	top: 100%;
+	left: 0;
+	right: 0;
+    z-index: 99;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+	display: none;
+}
+
+.select-items div:hover{
+    background-color: rgb(49, 101, 109);
+}
+header{
+    background-color: #212121;
+    color: white;
+    margin: 0 auto;
+    padding: 0.5em;
+}
+.inNav{    
+    display: inline-block;
+    /* margin: 0.25ch 0.5ch 0.25ch 0.5ch; */
+    margin: 0.25ch auto;
+    /* padding-left: 20px; */
+    cursor: pointer;
+    color: #F44336;
+}
+.btn{
+    display: inline-block;
+    /* width: 50%; */
+    /* margin: 0 auto; */
+    margin: 0.5ch;
+    border: 0.125rem solid #f93154;
+	color: #f93154;
+	padding: 0.5em;
+    border-radius: 0.5em;
+}
+.btn:hover:not(.wallMode){
+    transform: scale(1.06);
+    transition: 0.3s;
+    background-color: #f93154;
+    border-color: #ffffff;
+    color: #fff;
+}
+
+#startbtn {
+	border-color: #ffbb00;
+	color: #ffbb00;
+}
+#startbtn.btn:hover{
+	background-color: #28334AFF;
+	color: #fffb00;
+    border-color: #fffb00;
+}
+@keyframes wallmode{
+    from{transform:scale(0.8);}
+    to{transform:scale(1);}
+}
+.addWallBtn {
+    border-color: #ADEFD1FF;
+    color: #ADEFD1FF;
+    /* transition-duration: 0.5s; */
+}
+.addWallBtn.btn:hover{
+    border-color: #00203FFF;
+    background-color: #ADEFD1FF;
+    color: #00203FFF;
+    /* color: #ffffff; */
+    /* transform:scale(1.1); */
+    /* transition-delay: 0.2s; */
+}
+.wallMode{
+    animation: wallmode 0.1s;
+    background-color: rgb(43, 233, 217);
+    border-color: #fff;
+    /* border-color: rgb(44, 146, 100); */
+    color: rgb(0, 0, 0);
+    /* transform:scale(1.1); */
+}
+
+.otherBtn.btn:hover{
+	background-color: #fff;
+	color: #f93154;
+    border: 0.12rem solid #f93154;
+}
+
+.wghtBtn{
+	border-color: #00c3ff;
+	color: #00c3ff;
+}
+.wghtBtn.btn:hover{
+	background-color: #39c0ed;
+    /* border-color: #00c3ff; */
+}
+.infoCell{
+    width: 30px;
+    height: 30px;
+    background-color: white;
+}
+.infoCell.grn{
+    background-color: #4dff94;
+}
+.infoCell.orng{
+    background-color: #ff9d00;
+}
+.infoCell.ylw{
+    background-color: #f8f830;
+}
+.t{
+    display: inline-block;
+    margin:0.5em;
+}
+.cn{
+    display: flex !important;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+}
+#tt{
+    min-width: 16ch;
+    text-align: left;
+}
+.colored-toast.swal2-icon-success {
+    background-color: #82ca58 !important;
+}
+
+.colored-toast.swal2-icon-error {
+    background-color: #f27474 !important;
+}
+
+.colored-toast.swal2-icon-warning {
+    background-color: #f8bb86 !important;
+}
+
+.colored-toast.swal2-icon-info {
+    background-color: #3fc3ee !important;
+}
+
+.colored-toast.swal2-icon-question {
+    background-color: #87adbd !important;
+}
+
+.colored-toast .swal2-title {
+    color: white;
+    text-align: center;
+}
+.colored-toast .swal2-text {
+    color: white;
+    text-align: center;
+}
+
+.colored-toast .swal2-close {
+    color: white;
+}
+
+.colored-toast .swal2-content {
+    color: white;
+}
+body{
+    margin: 0 auto;
+    font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, sans-serif;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    /* font-size: 1em; */
+    user-select:none;
+    position: relative;
+    min-height: 100vh;
+}
+.root{
+    padding-bottom: 4em;  
+}
+
+footer {
+    text-align: center;
+	background-color: #212121;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 4em;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer p{
+    font-family: Arial;
+    font-size: large;
+}
+.nodes {
+	display: table;
+	margin: 1.5em auto;
+}
+.root {
+	width: 100%;
+}
+
+.cell {
+	width: 30px;
+	height: 30px;
+	border: 1px solid rgb(16, 203, 236);
+	/* border-radius: 50%; */
+	box-sizing: border-box;
+	display: inline-block;
+	vertical-align: top;
+	overflow: hidden;
+}
+.node-row .cell:not(:last-child){
+    border-right: none;
+}
+
+.nodes .node-row:not(:last-child) .cell{
+    border-bottom: none;
+}
+/* .node-col {
+  border: 1px solid gray;
+  min-width: 20px;
+  min-height: 20px;
+  display: inline-block;
+  margin-right: 2px;
+} */
+
+.start {
+    background-color: darkred;
+    border:none;
+	font-family: cursive;
+	/* font-style: italic; */
+	font-weight: bolder;
+	/* font-size: x-large; */
+	color: white;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 30px;
+	animation-name: FadeInOut;
+	animation-duration: 0.2s;
+	animation-timing-function: ease-in-out;
+}
+
+.end {
+    background-color: darkred;
+    border:none;
+	/* font-size: x-large; */
+	font-family: cursive;
+	/* font-style: italic; */
+	font-weight: bolder;
+	color: white;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 30px;
+	animation-name: FadeInOut;
+	animation-duration: 0.2s;
+	animation-timing-function: ease-in-out;
+}
+.weight {
+	font-family: cursive;
+	/* font-style: italic; */
+	/* font-weight: lighter; */
+	/* color: white; */
+	border: 1px solid rgb(136, 136, 236);
+	border-radius: 42%;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 30px;
+	/* animation-name: FadeInOut;
+	animation-duration: 0.1s;
+	animation-timing-function: ease-in-out; */
+    transition: 0.1s;
+    /* transition-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715); */
+	overflow: hidden;
+}
+.cell.weight.finalpath {
+	border: 1px solid black;
+	border-radius: 0%;
+}
+@keyframes visitedFadeInOut {
+	from {
+		transform: scale(1.3);
+		background-color: cyan;
+		border-radius: 50%;
+	}
+	to {
+		transform: scale(0.7);
+		background-color: #2ed4a2;
+		border-radius: 0%;
+	}
+}
+.visiting {
+	background-color: #ffff4d;
+    color: black;
+    border-color: rgb(36, 159, 197);
+	/* transition: 0.2s; */
+	animation: visitingFadeInOut 0.13s ease-in-out 0s;
+	/* animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); */
+}
+@keyframes visitingFadeInOut {
+	from {
+		transform: scale(0.3);
+		background-color: orange;
+		border-radius: 50%;
+	}
+	to {
+		transform: scale(1);
+		background-color: yellow;
+		border-radius: 0%;
+	}
+}
+.visited {
+	background-color: #4dff94;
+	/* border-color: #004669; */
+	border-color: rgb(36, 159, 197);
+	animation-name: visitedFadeInOut;
+	transition: 0.1s;
+	/* animation-delay: 0.6s; */
+	animation-duration: 0.2s;
+    animation-timing-function: ease-in-out;
+    /* animation-iteration-count: 2; */
+	overflow: hidden;
+}
+
+.start.visited {
+	background-color: darkslategray; /* rgb(111, 0, 255) */
+}
+.end.visited {
+	background-color: darkslategray; /* rgb(111, 0, 255) */
+}
+.bellmanford{
+    background-color: #f05800;
+    transition: none !important;
+}
+
+@keyframes shortestPath {
+	0% {
+		background-color: #ff9d00;
+        color: white;
+    }
+	25% {
+        background-color: #e2cf24;
+		color: rgb(46, 24, 65);
+	}
+	50% {
+		background-color: rgb(236, 127, 178);
+		color: rgb(248, 248, 248);
+	}
+	75% {
+		background-color: #53ade0;
+		color: rgb(255, 255, 255);
+	}
+	100% {
+		background-color: #eca012;
+		color: white;
+	}
+}
+.finalpath {
+	background-color: #ff9d00;
+	border: 0;
+	color: white;
+    animation: shortestPath 6s ease-in-out 0s 1;
+    cursor: pointer;
+	/* animation-delay: 0.8s;
+    animation-duration: 6s;
+	animation-timing-function: ease-in-out; */
+}
+
+@keyframes FadeInOut {
+	from {
+		transform: scale(0.3);
+		border-radius: 50%;
+	}
+	to {
+		transform: scale(1);
+		border-radius: 0%;
+	}
+}
+.wall {
+	background-color: #081124;
+	border: 0;
+	animation-name: FadeInOut;
+	animation-duration: 0.2s;
+	animation-timing-function: ease-in-out;
+    transition-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);
+}
+.cell.wallHover:hover {
+    background-color: rgb(55, 55, 61);
+    cursor: cell;
+}
+
+.wallHover.wall:hover {
+    cursor:url("eraser.png"), auto;
+    background-color: #727272;
+}
