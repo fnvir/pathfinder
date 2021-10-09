@@ -1,0 +1,42 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PathFinder</title>
+    <link rel="icon" type="image/png" href="favicon.png"/>
+    <link rel="stylesheet" href="topmenu.css">
+    <link rel="stylesheet" href="body.css">
+</head>
+
+<body>
+    <header>
+        <div class="inNav custom-select">
+            <select id="algoSelect" autocomplete="off">
+                <option value="0">Pathfinding Algorithms </option>
+                <option value="bfs">Breadth First Search</option>
+                <option value="dfs">Depth First Search</option>
+                <option value="dijkstra">Dijkstra's Algorithm</option>
+                <option value="bestfs">Best First Search</option>
+                <option value="bellman">Bellman-Ford Algorithm</option>
+            </select>
+        </div>
+        <div class="inNav buttonContainer">
+            <span class="btn" id="startbtn" title="Visualize">Visualize</span>
+            <span class="addWallBtn btn" id="wallbtn">Draw Walls</span>
+            <span class="wghtBtn btn" id="weightbtn">Add Weights</span>
+            <span class="otherBtn btn" id="randwalls">Random Walls</span>
+            <span class="otherBtn btn" id="randmaze">Random Maze</span>
+            <span class="btn" id="removewalls">Remove Walls</span>
+            <span class="btn" id="reset">Clear All</span>
+        </div>
+    </header>
+    <div class="root">
+        <div class="nodes"></div>
+    </div>
+    <footer>
+        <p>PathFinder v1.0 &beta;</p>
+    </footer>
+    <script src="sweetalert2.all.min.js"></script>
+    <script src="main.js" charset="utf-8"></script>
+</body>
+
+</html>
